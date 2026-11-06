@@ -1,0 +1,191 @@
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #faf7f2;
+    color: #39342f;
+    line-height: 1.7;
+}
+
+/* NAVIGATION BAR */
+header {
+    background-color: #faf7f2;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: #9b7057;
+    font-size: 28px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #39342f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #a8795b;
+}
+
+/* HOME SECTION */
+.hero {
+    text-align: center;
+    padding: 130px 20px;
+    background: linear-gradient(135deg, #eee3d7, #faf7f2);
+}
+
+.intro, .tag {
+    color: #a8795b;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #a8795b;
+}
+
+.hero h2 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #987052;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #654a38;
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 85px 12%;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin: 10px 0 25px;
+}
+
+.section > p:not(.tag) {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.alternate {
+    background-color: #f0e8df;
+}
+
+/* CARDS */
+.card {
+    background-color: #fff;
+    padding: 25px;
+    margin: 18px auto;
+    max-width: 750px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #987052;
+    margin-bottom: 8px;
+}
+
+/* SKILLS GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skills-grid .card {
+    width: 100%;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    background-color: #39342f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 60px 7%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
